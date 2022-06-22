@@ -54,8 +54,7 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
-        from login import CmdEchoTest
-        self.add(CmdEchoTest)
+
 
 class UnloggedinCmdSet(default_cmds.UnloggedinCmdSet):
     """

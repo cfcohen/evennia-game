@@ -4,7 +4,7 @@ Evennia settings file.
 The available options are found in the default settings file found
 here:
 
-/usr/local/lib/python3.9/dist-packages/evennia-0.9.5-py3.9.egg/evennia/settings_default.py
+/home/cory/Source/Evennia/Evennia-1.0dev/evennia/settings_default.py
 
 Remember:
 
@@ -32,10 +32,8 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "evstock"
+SERVERNAME = "evennia-game-1.0-dev"
 
-CMDSET_UNLOGGEDIN = "login.LoginCmdSet"
-LOGIN_THROTTLE_LIMIT = 99999
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
