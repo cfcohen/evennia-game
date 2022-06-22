@@ -41,6 +41,8 @@ def node_password(session, raw_string, **kwargs):
         if account:
             # This is where the line from above needs to be moved to.
             #session.msg("In _check_input(), turning echo on.", options={'echo': True})
+            # But this DOES NOT work. :-(  There apparently has to be text with it?
+            #session.msg(options={'echo': True})
             kwargs["account"] = account
             return ("node_login", kwargs)
         else:
@@ -50,6 +52,8 @@ def node_password(session, raw_string, **kwargs):
             return ("node_password", kwargs)
 
     session.msg("In node_password(), turning echo off.", options={'echo': False})
+    # But this DOES NOT work. :-(  There apparently has to be text with it?
+    #session.msg(options={'echo': False})
     text = "Password: "
     options = ( {"key": "_default", "goto": (_check_input, kwargs)}, )
     return text, options
