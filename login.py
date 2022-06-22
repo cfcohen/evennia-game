@@ -31,6 +31,7 @@ def node_password(session, raw_string, **kwargs):
 
     def _check_input(session, password, **kwargs):
         password = password.rstrip()
+        # Moving this line from here... to a few lines below also fixes the problem.
         session.msg("In _check_input(), turning echo on.", options={'echo': True})
 
         account, errors = _ACCOUNT.authenticate(
@@ -38,6 +39,8 @@ def node_password(session, raw_string, **kwargs):
             ip=session.address, session=session)
 
         if account:
+            # This is where the line from above needs to be moved to.
+            #session.msg("In _check_input(), turning echo on.", options={'echo': True})
             kwargs["account"] = account
             return ("node_login", kwargs)
         else:
