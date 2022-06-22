@@ -34,6 +34,8 @@ from evennia.settings_default import *
 # This is the name of your game. Make it catchy!
 SERVERNAME = "evennia-game-1.0-dev"
 
+CMDSET_UNLOGGEDIN = "login.LoginCmdSet"
+LOGIN_THROTTLE_LIMIT = 99999
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
